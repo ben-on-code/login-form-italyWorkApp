@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>cittadinanza form</title>
+</head>
+<body>
+    
+    <div class="container">
+            <div class="header">
+                <h1 class="header__title">cittadinzana</h1>
+                <p class="header__sub">login form</p>
+            </div>
+        <form action="#" method="GET" class="form">
+            <div class="form__name">
+                <label for="name" class="form__name--label">Name</label>
+                <input type="text" name="name" id="name" placeholder="John" class="form__name--input" required>
+            </div>
+
+            <div class="form__surname">
+                <label for="surname" class="form__surname--label">Surname</label>
+                <input type="text" name="surname" id="surname" placeholder="Galt" class="form__surname--input">
+            </div>
+            
+            <div class="form__email">
+                <label for="email" class="form__email--label">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" class="form__email--input">
+            </div>
+
+            <div class="form__procedure">
+                <p class="form__title">Que tramite necesitas?</p>
+
+                <label for="procedure-c" class="form__procedure-box">
+                    <input name="procedure" id="procedure-c" type="radio" class="form__procedure-box--input"><span class="form__procedure-box--label">Ciudadania</span>
+                </label>
+
+                <label for="procedure-p" class="form__procedure-box">
+                    <input name="procedure" id="procedure-p" type="radio" class="form__procedure-box--input"><span class="form__procedure-box--label">Pasaporte</span>
+                </label>
+
+                <label for="procedure-o" class="form__procedure-box">
+                    <input name="procedure" id="procedure-o" type="radio" class="form__procedure-box--input"><span class="form__procedure-box--label">Otro</span>
+                </label>
+            </div>
+
+            <div class="form__info">
+                <label for="info" class="form__info--label">Asesoria:</label>
+                <select name="info" id="info" class="form__info--select">
+                    <option value="asesoria-personal">Personal</option>
+                    <option value="asesoria-familiar">Grupo familiar</option>
+                    <option value="asesoria-otro">Otro</option>
+                </select>
+            </div>
+
+
+
+
+
+
+            <!-- <div class="form__bithdate">
+                <label for="date" class="form__birthdate--label">Date of birth</labe>
+                <input type="date" name="date" id="date" min="2000-01-01"  class="form__birthdate--input">
+            </div> -->
+        </form>    
+    </div> 
+</body>
+</html>
