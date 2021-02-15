@@ -1,6 +1,6 @@
 // COLORS VARIABLES
 $color-primary: rgba(0, 140, 69, .15);
-$color-primary-dark: rgba(0, 140, 69, 1);
+$color-primary-dark: rgba(0, 140, 69, .9);
 $color-grey-light-1: #faf9f9;
 $color-grey-light-2: rgba(255,255,255, 0.8);
 $color-grey-light-3: #f0eeee;
@@ -9,26 +9,25 @@ $color-grey-dark-1: #333;
 $color-grey-dark-2: #777;
 $color-grey-dark-3: #999;
   
-$shadow-dark: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-
-  
+$shadow-dark: 0 1rem 2rem rgba(0, 0, 0, 0.25);
 
 * {
     margin: 0;
     padding: 0;
 }
-  
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
-  
+
+*::selection{
+    background-color: $color-primary-dark;
+}
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem == 10px   10px/16px == 62.5%
-}
-  
+} 
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
