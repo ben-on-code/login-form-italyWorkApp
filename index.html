@@ -3,71 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+
     <title>cittadinanza form</title>
 </head>
+
 <body>
-    
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <div class="container">
-            <div class="header">
-                <h1 class="header__title">cittadinzana</h1>
-                <p class="header__sub">login form</p>
-            </div>
-        <form action="#" method="GET" class="form">
+
+        <div class="header">
+            <h1 class="header__title" id="title">cittadinzana</h1>
+            <p class="header__sub" id="description">login form</p>
+        </div>
+
+        <form action="#" method="GET" class="form" id="survey-form">
             <div class="form__name">
-                <label for="name" class="form__name--label">Name</label>
-                <input type="text" name="name" id="name" placeholder="John" class="form__name--input" required>
+                <label for="name" class="form__name--label" id="name-label">Name</label>
+                <input type="text" name="name" id="name" placeholder="Introduzca su nombre" class="form__name--input"
+                    id="name" required>
             </div>
 
             <div class="form__surname">
                 <label for="surname" class="form__surname--label">Surname</label>
-                <input type="text" name="surname" id="surname" placeholder="Galt" class="form__surname--input">
+                <input type="text" name="surname" id="surname" placeholder="Aqui su apellido por favor"
+                    class="form__surname--input">
             </div>
-            
+
             <div class="form__email">
-                <label for="email" class="form__email--label">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email" class="form__email--input">
+                <label for="myemail" class="form__email--label" id="email-label">Email</label>
+                <input type="email" name="myemail" id="email" placeholder="yourmail@gmail.com"
+                    class="form__email--input">
+            </div>
+
+            <div class="form__age">
+                <label for="number" class="form__age--label" id="number-label">Que edad tienes?</label>
+                <input type="number" class="form__age--input" placeholder="18" name="number" id="number" min="18"
+                    max="90">
             </div>
 
             <div class="form__procedure">
-                <p class="form__title">Que tramite necesitas?</p>
+                <p class="form__procedure--title">Que tramite necesitas?</p>
 
                 <label for="procedure-c" class="form__procedure-box">
-                    <input name="procedure" id="procedure-c" type="radio" class="form__procedure-box--input"><span class="form__procedure-box--label">Ciudadania</span>
+                    <input name="procedure" id="procedure-c" type="radio" class="form__procedure-box--input"
+                        value="ciudadania">
+                    <span class="form__procedure-box--label">Ciudadania</span>
                 </label>
 
                 <label for="procedure-p" class="form__procedure-box">
-                    <input name="procedure" id="procedure-p" type="radio" class="form__procedure-box--input"><span class="form__procedure-box--label">Pasaporte</span>
+                    <input name="procedure" id="procedure-p" type="radio" class="form__procedure-box--input"
+                        value="pasaporte">
+                    <span class="form__procedure-box--label">Pasaporte</span>
                 </label>
 
                 <label for="procedure-o" class="form__procedure-box">
-                    <input name="procedure" id="procedure-o" type="radio" class="form__procedure-box--input"><span class="form__procedure-box--label">Otro</span>
+                    <input name="procedure" id="procedure-o" type="radio" class="form__procedure-box--input"
+                        value="otro">
+                    <span class="form__procedure-box--label">Otro</span>
                 </label>
             </div>
 
             <div class="form__info">
-                <label for="info" class="form__info--label">Asesoria:</label>
-                <select name="info" id="info" class="form__info--select">
+                <label for="dropdown" class="form__info--label">Asesoria:</label>
+                <select name="dropdown" class="form__info--select" id="dropdown">
                     <option value="asesoria-personal">Personal</option>
                     <option value="asesoria-familiar">Grupo familiar</option>
                     <option value="asesoria-otro">Otro</option>
                 </select>
             </div>
 
+            <div class="form__papers">
+                <p class="form__papers--title">Para avanzar con los tramites, necesitas cierta documentacion.<br>
+                    Confirma cuales tienes a continuacion:
+                </p>
 
+                <label for="papers-n" class="form__papers-box">
+                    <input type="checkbox" name="papers" id="papers-n" class="form__papers-box--input" value="acta-n">
+                    <span class="form__papers-box--label">Acta de nacimiento</span>
+                </label>
 
+                <label for="papers-c" class="form__papers-box">
+                    <input type="checkbox" name="papers" id="papers-c" class="form__papers-box--input" value="acta-c">
+                    <span class="form__papers-box--label">Acta de casamiento</span>
+                </label>
 
+                <label for="papers-d" class="form__papers-box">
+                    <input type="checkbox" name="papers" id="papers-d" class="form__papers-box--input" value="acta-d">
+                    <span class="form__papers-box--label">Acta de defuncion</span>
+                </label>
+            </div>
 
+            <div class="form__textarea">
+                <label for="textarea" class="form__textarea--label">Describe tu caso brevemente por favor</label>
+                <textarea name="textarea" id="textarea" class="form__textarea--input" cols="30" rows="10"
+                    placeholder="Mientras mas detalles sobre tus descendientes tengas, mejor!"></textarea>
+            </div>
 
-            <!-- <div class="form__bithdate">
-                <label for="date" class="form__birthdate--label">Date of birth</labe>
-                <input type="date" name="date" id="date" min="2000-01-01"  class="form__birthdate--input">
-            </div> -->
-        </form>    
-    </div> 
+            <div class="form__button">
+                <button type="submit" class="form__button--click" id="submit">Enviar</button>
+            </div>
+
+        </form>
+    </div>
 </body>
 </html>
