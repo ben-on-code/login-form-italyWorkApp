@@ -11,7 +11,6 @@
     align-items: center;
 }
 
-
 .header{
         display: flex;
         flex-direction: column;
@@ -21,26 +20,28 @@
         width: 100%;
         font-size: 2rem;
         line-height: 1.1;
+        margin-bottom: 1rem;
+        background-color: $color-primary-dark;
+        color: $color-grey-light-1;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 
     &__title{
         font-size: 3rem;
         text-transform: uppercase;
         margin-top: 1rem;
-
-        &__sub{
-
-
-        }
+    }
+    &__sub{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
     }
 }
 
 .form{
     font-family: inherit;
-    font-size: 2.5rem;
     font-weight: 400;
     color: $color-grey-light-1;
-
-    width: 90%;
+    width: 55vh;
     height: 100%;
 
     display: flex;
@@ -48,23 +49,19 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-
     ////////////// form divs
     & > *{            
-        
         display: flex;
         flex-direction: column;
-        
         width: 100%;
     }
-
 
     ////////////// form label
         &__name--label,               
         &__surname--label,
         &__email--label{
             font-family: inherit;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 400;
             margin-bottom: .1rem;
             margin-left: 1rem;
@@ -84,7 +81,7 @@
             box-shadow: $shadow-dark;
                
             &::placeholder{
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
             
             &:focus{
@@ -93,64 +90,184 @@
             }
         }
 
+        ////////////// form number
+        &__age{
+            margin: .5rem 0;
+            width: 96%;
+            align-self: center;
+
+            &--label{
+                font-size: 2rem;
+                margin-bottom: .25rem;
+            }
+
+            &--input{
+                width: 100%;
+                font-size: 1.5rem;
+                padding: .5rem;
+                border: none;
+                border-radius: .3rem;
+                box-shadow: $shadow-dark; 
+                transition: all .2s;
+
+                &:in-range{
+                    border: 1px solid green;
+                }
+                &:out-of-range{
+                    border: 1px solid red;
+                }
+            }
+        }
 
         ////////////// procedure form-radio box
         &__procedure{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            font-size: 1.8rem;
+            align-self: center;
+            width: 96%;
+
+            &--title{
+                font-size: 2rem;
+            }
            
             &-box{
-                width: inherit;
                 display: flex;
+                width: inherit;
                 align-items: center;
                 line-height: 1.6;
-                margin-left: 1rem;
 
                 &--input{
                     cursor: pointer;
-                    min-width: 1.8rem;
-                    min-height: 1.8rem;
+                    min-width: 1.7rem;
+                    min-height: 1.7rem;
                     margin-right: .4rem;
                     align-self: center;
                 }
                 
                 &--label{
                     cursor: pointer;
+                    font-size: 1.5rem;
                 }
             }
         }
 
-        &__title{
-            margin-left: 1rem;
-        }
-
-
         ////////////// form selection
-
         &__info{
+            width: 96%;
+            align-self: center;
             margin-top: .5rem;
+            margin-bottom: 1rem;
 
             &--label{
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             &--select{
-                font-size: 1.8rem;
-                padding: .1rem;
-                transition: all .3s;
+                font-size: 1.5rem;
+                padding: .5rem;
+                border: none;
+                border-radius: .3rem;
+                box-shadow: $shadow-dark;  
+            }
+        }
 
-                & > *{
-                    color: red;
-                }
+    ////////////// form checkbox
+      &__papers{
+        width: 96%;
+        align-self: center;
+
+        &--title{
+            font-size: 2rem;
+            line-height: 1.25;
+            margin-bottom: .5rem;
+        }
+
+        &-box{
+            display: flex;
+            align-items: center;
+            line-height: 1.7;
+
+
+            &--label{
+                font-size: 1.4rem;
+                cursor: pointer;
 
             }
 
+            &--input{
+                cursor: pointer;
+                min-width: 1.8rem;
+                min-height: 1.8rem;
+                margin-right: .4rem;
+                align-self: center;
+            }
+        }
+      }
 
+    ////////////// form textarea
+
+      &__textarea{
+          margin-top: .5rem;
+          width: 96%;
+          align-self: center;
+
+        &--label{
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            cursor: pointer;
         }
 
+        &--input{
+            resize: none;
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 15rem;
+            padding-left: .5rem;
+            padding-top: .25rem;
+            border: none;
+            border-radius: .3rem;
+            scroll-behavior: smooth;
+            box-shadow: $shadow-dark;
+        }
+      }
+
+    ////////////// form button
+    &__button{
+        margin-left: 1rem;
+        margin-top: 2rem;
+        width: 50%;
+        align-self: center;
+        
+        &--click{
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            color: $color-grey-light-1;
+            background-color: $color-primary-dark;
+            padding: 1rem 0;
+            border: none;
+            border-radius: .3rem;
+            box-shadow: $shadow-dark;
+            transition: all .2s;
+
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
